@@ -115,7 +115,7 @@ import java.util.Locale;
         System.out.println("==============================================");
 
 
-        //NumberFormat nf = NumberFormat.getNumberInstance(new Locale("in,", "ID"));
+        //NumberFormat/ nf = NumberFormat.getNumberInstance(new Locale("in,", "ID"));
     }
         public Gajian(String nama, String posisi, String penempatan, int masakerja) {
             this.nama = nama;
