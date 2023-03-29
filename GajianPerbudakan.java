@@ -1,5 +1,5 @@
 package jufrin;
-
+//dont have
 import java.util.Scanner;
 
     public class GajianPerbudakan {
