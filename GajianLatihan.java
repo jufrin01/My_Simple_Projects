@@ -5,7 +5,7 @@ package jufrin;
         String nama;
         String posisi;
         String Penempatan;
-        int masakerja;
+        double masakerja;
         long gaji_bulanan;
         double tunjangan_penempatannya;
         double biaya_pajak;
@@ -81,21 +81,37 @@ package jufrin;
     }
 
 
-            /*>>>>>>>>>>>>>OUTPUT STATUS DATA DAN PEMANGGILAN MENTHOD<<<<<<<<<<<<<<<<*/
+         /*>>>>>>>>>>>>>OUTPUT STATUS DATA DAN PEMANGGILAN MENTHOD<<<<<<<<<<<<<<<<*/
     public void StatusKaryawan() {
+        Locale LokasiID = new Locale("in","ID");
+        NumberFormat Formatrupiah = NumberFormat.getNumberInstance(LokasiID);
+        NumberFormat Formatrp = NumberFormat.getCurrencyInstance(LokasiID);
+        NumberFormat Formatrp1 = NumberFormat.getCompactNumberInstance();
+        NumberFormat Formatrp2 = NumberFormat.getIntegerInstance(LokasiID);
+
+//        DecimalFormat kursIndonesia = (DecimalFormat) DecimalFormat.getCurrencyInstance();
+//        DecimalFormatSymbols formatRp = new DecimalFormatSymbols();
+//
+//        formatRp.setCurrencySymbol("Rp. ");
+//        formatRp.setMonetaryDecimalSeparator(',');
+//        formatRp.setGroupingSeparator('.');
+
         System.out.println("=============================================");
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++++");
         System.out.println("Nama Karyawan        = " + nama);
         System.out.println("Jabatan              = " + posisi);
         System.out.println("Penempatan           = " + Penempatan);
         System.out.println("Masa Kerja           = " + masakerja + " Tahun");
-        System.out.println("Gaji Pokok           = Rp. " + gaji_bulanan);
-        System.out.println("Tunjangan Penempatan = Rp. " + tunjangan_penempatannya);
-        System.out.println("Bonus Masa Kerja     = Rp. " + Bonus_Masa_Kerja);
-        System.out.println("Potongan Pajak       = Rp. " + biaya_pajak);
-        System.out.println("Take Home Pay        = Rp. " + getTakeHomePay());
+        System.out.println("Gaji Pokok           = " + Formatrp.format(gaji_bulanan));
+        System.out.println("Tunjangan Penempatan = " + Formatrp.format(tunjangan_penempatannya));
+        System.out.println("Bonus Masa Kerja     = " + Formatrp.format(Bonus_Masa_Kerja));
+        System.out.println("Potongan Pajak       = " + Formatrp.format(biaya_pajak));
+        System.out.println("Take Home Pay        = " + Formatrp.format(getTakeHomePay()));
         System.out.println("++++++++++++++++++++++++++++++++++++++++++++++");
         System.out.println("==============================================");
+
+
+        //NumberFormat nf = NumberFormat.getNumberInstance(new Locale("in,", "ID"));
     }
         public Gajian(String nama, String posisi, String penempatan, int masakerja) {
             this.nama = nama;
