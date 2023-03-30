@@ -1,5 +1,5 @@
 package jufrin;
-
+//dont have
 import java.util.Scanner;
 
     public class GajianPerbudakan {
@@ -12,7 +12,7 @@ import java.util.Scanner;
         System.out.print("Penempatan    = ");
         String penempatan = input.nextLine();
         System.out.print("Masa Kerja    = ");
-        int masakerja = input.nextInt();
+        double masakerja = input.nextDouble();
 
         Gajian Perusaha_Pembudakan = new Gajian (nama, posisi,penempatan, masakerja);
         Perusaha_Pembudakan.StatusKaryawan();
